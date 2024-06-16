@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'redbullmuenchen.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
+#PROD AND LOCAL SETUP
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -99,6 +99,7 @@ DATABASES = {
         'PASSWORD': 'x4&rXW3$d6'
     }
 }
+
 
 # Standard Setup
 # DATABASES = {
