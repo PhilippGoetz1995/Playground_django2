@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-bgdpob975!6fklke81qp(4_ukajr)t6vs1du)*h(1y^ul5**$#
 DEBUG = True
 
 # AWS PROD Setup
-ALLOWED_HOSTS = ['ec2-3-76-35-196.eu-central-1.compute.amazonaws.com', 'localhost', 'dev.p-goetz.de']
+ALLOWED_HOSTS = ['ec2-3-76-35-196.eu-central-1.compute.amazonaws.com', '3.76.35.196', 'localhost', 'dev.p-goetz.de']
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
@@ -144,14 +144,23 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, "media"),
-]
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+STATIC_URL = "/static/"
+STATIC_ROOT = "/home/ec2-user/Playground_django2/static/"
+STATICFILES_DIRS = [BASE_DIR / "static" ]
+
+
+# Saving old configuration as backup
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, "static"),
+#    os.path.join(BASE_DIR, "media"),
+#]
+#STATIC_URL = '/static/'
+#MEDIA_URL = '/media/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
